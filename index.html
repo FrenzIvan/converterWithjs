@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="box">
+			<form action="#" method="#" class="forms">
+				<input type="text" id="input" placeholder="Input" />
+				<select name="" id="inputOne">
+					<option value="1">Inch</option>
+					<option value="2">Meter</option>
+					<option value="3">Foot</option>
+				</select>
+				<select name="" id="result">
+					<option value="1">Inch</option>
+					<option value="2">Meter</option>
+					<option value="3">Foot</option>
+				</select>
+				<button onclick="convertLength()">Convert</button>
+			</form>
+			<p id="display" style="color: white">Answer:</p>
+		</div>
+		<script>
+			function convertLength() {
+				let inputNum = document.getElementById("input").value;
+				let inputType = document.getElementById("inputOne").value;
+				let resultType = document.getElementById("result").value;
+
+				if (inputType == 1 && resultType == 2) {
+					resultVal = Number(inputNum) / 39.37;
+					resultValue = resultVal;
+				} else if (inputType == 1 && resultType == 3) {
+					resultVal = Number(inputNum) / 12;
+					resultValue = resultVal;
+				} else if (inputType == 1 && resultType == 1) {
+					resultValue = "You entered the same value";
+				} else if (inputType == 2 && resultType == 1) {
+					resultVal = Number(inputNum) / 39.37;
+					resultValue = resultVal;
+				} else if (inputType == 2 && resultType == 2) {
+					resultValue = "You entered the same value";
+				} else if (inputType == 2 && resultType == 3) {
+					resultVal = Number(inputNum) / 3.281;
+				} else if (inputType == 3 && resultType == 3) {
+					resultValue = "You entered the same value";
+				} else if (inputType == 3 && resultType == 2) {
+					resultVal = Number(inputNum) / 3.281;
+					resultValue = resultVal;
+				} else if (inputType == 3 && resultType == 1) {
+					resultVal = Number(inputNum) / 12;
+					resultValue = resultVal;
+				}
+				document.getElementById("display").innerHTML = resultValue;
+			}
+		</script>
+	</body>
+</html>
